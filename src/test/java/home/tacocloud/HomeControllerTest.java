@@ -1,6 +1,5 @@
 package home.tacocloud;
 
-import home.tacocloud.controllersJDBC.HomeController;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +12,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 @RunWith(SpringRunner.class)
-@WebMvcTest(HomeController.class)   //веб-тест для HomeController
+//@WebMvcTest(HomeController.class)   //веб-тест для HomeController
 public class HomeControllerTest {
 
     @Autowired
