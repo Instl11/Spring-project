@@ -4,7 +4,10 @@ import home.tacocloud.Ingredient;
 import home.tacocloud.dataJPA.IngredientRepository;
 import org.springframework.data.rest.webmvc.RepositoryRestController;
 import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 @RepositoryRestController
 @RequestMapping(path = "api/ingredients", produces = MediaType.APPLICATION_JSON_VALUE)

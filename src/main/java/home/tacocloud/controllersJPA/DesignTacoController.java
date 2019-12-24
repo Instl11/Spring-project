@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.*;
 
@@ -60,10 +61,10 @@ public class DesignTacoController {
 
     @PostMapping
     public String processDesign(@Valid Taco designedTaco,
-                                Errors errors,
+                                BindingResult bindingResult,
                                 @ModelAttribute Order order) {
 
-        if (errors.hasErrors()) {
+        if (bindingResult.hasErrors()) {
             return "design";
         }
         Taco savedTaco = designRepo.save(designedTaco);

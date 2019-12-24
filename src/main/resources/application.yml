@@ -1,0 +1,38 @@
+logging:
+    level:
+        ROOT: error
+        org.springframework: warn
+        org.springframework.security: warn
+        org:
+            hibernate: warn
+            hibernate.SQL: DEBUG
+    file: c:\app.log
+    pattern:
+        file: "%d{HH:mm:ss} %-5p [%c] - %m%n"
+
+spring:
+    data:
+        rest:
+            base-path: /api
+    datasource:
+        initialization-mode: always
+        url: jdbc:postgresql://localhost/demo
+        password: 11111987
+        username: postgres
+    jpa:
+        generate-ddl: true
+        hibernate:
+            ddl-auto: update
+        properties:
+            hibernate:
+                dialect: org.hibernate.dialect.PostgreSQL95Dialect
+                jdbc:
+                    lob:
+                        non_contextual_creation: true
+                temp:
+                    use_jdbc_metadata_defaults: false
+        show-sql: true
+
+
+
+
